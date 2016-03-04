@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Whirlwind Historical Evolution of IIIT Hyd Submission for Blizzard 2015 </title>
+    
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="../css/bootstrap.min.css" rel="stylesheet"  media="screen">
+      <link href="../css/main.css" rel="stylesheet"  media="screen">
+    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Indian Language Synthesis</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1> Whirlwind History of Unit Selection Synthesis Research at IIIT Hyd  </EM></h1>
+
+<h3>       The submission by IIIT Hyderabad in 2015 was a Unit Selection and Concatenation one. <br> These are some of the ideas that we have been working on where our goal was to build TTS systems for Indian languages that are both stable and reliable on one hand, as well as unrestricted in nature on the other. We developed both  DNN based Statistical parametric and Unit Selection based synthesis systems. However, we have submitted only the USS system. In this post, therefore, I will concentrate on the evolution of the USS system.
+</h3>
+<p>
+
+One of the first questions that comes to mind when thinking about Unit Selection Synthesis is the unit size. Typical unit sizes are diphones, phones and syllables, each with its own set of advantages/disadvantages.
+
+A <a  href="https://www.cs.cmu.edu/~awb/papers/eurospeech2003/unitsize.pdf"> Research study</a>   conducted by my primary advisor Dr. Kishore Prahallad and Prof. Alan Black way back in 2003 does give us the answer, but lets first try to see what we require in terms of the unit.
+</p>
+<p>
+The unit, intuitively has to be <b><EM>long</EM></b> enough to be able to account for the co-articulative effects. In addition, if it has low energy at its boundaries, its beneficial as this might help in minimizing the audible discontinuities during concatenation. In case the unit also demonstrates <b><EM>different acoustic behavior</b></EM> based on its position in the word/phrase, it really helps us in pre clustering the units thereby reducing the effort at the backend search algorithm.
+ 
+</p> 
+
+<p>
+In the case of Indian languages, syllables follow all these properties and are therefore, natural choice as the unit. Also, it appears that humans speak in terms of syllables rather than phones or diphones, making them all the more attractive as the choice for the unit type. Besides, syllables in <b><EM>agglutinative languages</b></EM> like Indian are shown to demonstrate more co-articulative effect within the boundaries compared to across the boundaries. This justifies the choice theoretically, as we are guaranteed better connectivity across boundaries.
+
+Based on these intuitions, we have selected syllables as the basic units in the IIIT-H system. 
+</p>        
+
+
+<h3><EM> Data driven Approach to Synthesis </EM> </h3>
+
+<h3><EM> Letter to Sound Rules </EM> </h3>
+<p>
+A character in Indian language scripts is close to syllable and can be typically of the following form: C, V, CV,
+CCV and CVC, where C is a consonant and V is a vowel. There are about 35 consonants and about
+18 vowels in Indian languages. There is almost one to one correspondence between what is written and what is spoken in Indian
+languages. Each character in Indian language script has a correspondence to a sound of that language. In Indian languages, a consonant character is inherently bound with the vowel sound /a/, and is
+almost always pronounced with this vowel. In some occurances this vowel is not pronounced, and this
+is referred to as Inherent Vowel Suppression (IVS). 
+</p>
+
+<p>
+LTS rules are defined in a fairly straight forward manner, excepting the cases such as IVS, where simple heuristics are applied.
+</p>
+
+<h3> <EM> Syllabification Rules </EM></h3>
+
+<p>
+While letter to phone rules are almost straight forward in Indian languages, the syllabification rules
+are not trivial. There is need to come up with some rules to break the word into syllables. Dr. Kishore Prahallad and Dr.Rajeev Sangal have
+derived certain simplistic rules for syllabification i.e. rules for grouping clusters of C*VC* based on
+heuristic analysis of several words in Telugu and Hindi languages.
+</p>
+
+<h3> <EM> Synthesis </EM> </h3>
+
+<p>
+The method developed uses a prosodic matching function based on pitch, duration and energy for selecting
+an appropriate realization of a syllable. It was shown that the defined prosodic matching function implicitly
+selects a possible larger unit. The efficiency of this synthesis
+approach is demonstrated for Indian languages.
+</p>
+
+<h3> <EM> Transliteration Tools </EM> </h3>
+<p>
+Having developed synthesis engines, it was really crucial to implement a reliable key in tool for the Indian languages via QWERTY key board. 
+
+In this <a  href="http://www.ulib.org/conference/2005/17.pdf"> work</a>, a simple training scheme was derived demonstrate the usefulness of
+such a simple scheme to train transliteration editors
+for Indian languages, and report its advantages
+needing few entries in the mapping table maintenance, and ease of adding new features such as
+new letters to the transliteration scheme.
+</p>
+</div>
+
+<h2> So far so good. What are the problems?</h2>
+
+<div class="container">
+<h3> Missing Syllables </h3>
+
+<p>
+The quality
+of speech synthesis depends on the syllable coverage of the
+audio database. Hence the audio database is recorded using
+an optimally selected text to maximize syllable coverage.
+However missing syllable units are a frequent occurrence, especially
+for unrestricted text. Coupled with the influx of new words into the languages, we almost always have this issue.
+</p>
+
+<p>
+
+What do we do now? <br>
+We backoff. The back-off methods either
+<a href="http://speech.iiit.ac.in/svlpubs/conference/Raghavendra2008b.pdf"> substitute </a> the missing syllable with other syllables in the
+database or synthesize it using smaller sub-word units (SSUs) like diphones. Of course there will be a loss.
+But how severe is it? Actually, a lot. The very advantage of syllables was that they have high co-articulation within them compared to across boundaries. The
+SSU back-off method which forms the missing syllables from
+smaller sub-word units has to ensure that the units selected
+have the right coarticulative influences, some of which span
+across several phones.  The substitution methods avoid the aforementioned problems,
+by using other syllable or diphone units in the inventory
+to replace the missing units. However it takes considerable
+effort to design the substitution rules, requiring detailed
+perceptual studies when designing for new languages.
+</p>
+<p>
+To alleviate this,<a href="http://speech.iiit.ac.in/svlpubs/conference/ksp_2011_Conf_P001.pdf" > we proposed </a> present a rule-based back-off method motivated
+from a perceptual and speech production phenomenon,
+known as vowel epenthesis, to deal with the missing syllable
+and diphone units in Telugu language. The proposed backoff
+method emulates native speaker intuition in synthesis of
+the missing units. Hence it is found to be perceptually acceptable
+to the native speakers of the language. The rule-base
+is borrowed from the L2 (second language) acquisition research
+in Telugu. Further, the proposed back-off strategy is
+robust to the segmentation errors in automatically segmented
+databases, helping us ensure the quality of synthesis output.
+</p>  
+
+
+</div>
+
+<h2> Is that all?</h2>
+
+
+    <div class="container">
+
+<p> NO </p>
+
+<p> The system failed for Multilingual inputs. </p>
+<p> Due to the growth of code mixing it has become necessary to develop strategies
+for dealing with such multilingual text in TTS
+systems. These multilingual TTS systems should
+be capable of synthesizing utterances which contain
+foreign language words or word groups, without
+sounding unnatural.
+ Typical procedure used is Phone to phone mapping. However, this produces highly accented speech.
+
+</p>
+
+<p>
+We <a href="http://www.aclweb.org/anthology/P13-2035" > relooked </a> at this. 
+Our motivation
+for doing so, comes from our understanding
+of how humans pronounce foreign words while
+speaking. The speaker maps the foreign words to
+a sequence of phones of his/her native language
+while pronouncing that foreign word. For example,
+a native speaker of Telugu, while pronouncing
+an English word, mentally maps the English
+word to a sequence of Telugu phones as opposed
+to simply substituting English phones with the corresponding
+Telugu phones. Also, the receiver of
+the synthesized speech would be a Telugu native
+speaker, who may not have the knowledge of English
+phone set. Hence, approximating an English
+word using Telugu phone sequence may be more
+acceptable for a Telugu native speaker.
+
+</div>
+
+<h2> Blizzard Submission </h2>
+
+    <div class="container">
+
+
+<p> I have built the system by integrating the modules mentioned above and also designed a cross fade mechanism for smooth concatenation
+
+by reformulating the WSOLA algorithm so as to first find a suitable temporal point for joining the units at the boundary. This is done so that the concatenation is performed
+
+at a point where maximal similarity exists between the
+
+units. In other words, I tried to ensure that sufficient signal continuity exists at the concatenation point. For this,
+
+I have used the cross correlation between the units as a measure of similarity between the units. Then, the units are
+
+concatenated at the point of best correlation using crossfade technique to further remove the phase discontinuities. The number of frames used to calculate the correlation is limited by the duration of the available sub-word unit. In the current framework, we’ve used the last
+
+two frames of the individual units to calculate the cross
+
+correlation.
+
+</p>  
+  </div>
+<h3> 
+In a nutshell, the submission was a Unit Selection and Contenation one with reduced vowel based epenthesis for missing syllables and word to phone mapping for English words.
+</h3>
+
+
+  <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
+  <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+
+  </body>
+</html>
+

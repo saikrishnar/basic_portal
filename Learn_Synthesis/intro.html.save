@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Introduction to Text to Speech </title>
+    
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="../css/bootstrap.min.css" rel="stylesheet"  media="screen">
+      <link href="../css/main.css" rel="stylesheet"  media="screen">
+    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Text to Speech Synthesis</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+
+    <div class="container">
+      <h1> Introduction to TTS </EM></h1>
+</div>
+<div class="container">
+<p>
+I believe that the best way to get started(in any field) is by watching a few <EM> introductory video lectures </EM>, reading some <EM> PhD and Masters dissertations</EM> related to the field, some ( exceptional ?) <EM> papers and journals</EM>. I have populated this page hence with these, and ofcourse from the people I belive are the best(non-exhaustive list) in the business. I also plan to add my interpretations of everything on this page soon ! 
+</p>
+</div>
+
+    <div class="container">
+
+      <h1> Video Lectures  </EM></h1>
+</div>
+    <div class="container">
+
+      <a class="btn btn-primary btn-lg btn-block" onclick="https://archive.org/details/Text-to-speechtts-AQuickOverview" > Quick Overview of TTS by Dr. Kishore Prahallad</a>
+    <br>
+      <a class="btn btn-primary btn-lg btn-block" onclick="https://www.youtube.com/watch?v=xzL-pxcpo-E"> Applications of TTS by Prof. Simon King</a> <br>
+      <a class="btn btn-primary btn-lg btn-block" onclick="https://www.youtube.com/watch?v=7mjh0PSUv0M"> Closer Look at Synthesis by Kim Silverman </a> <br>
+
+</div>
+
+    <div class="container">
+      <h1> Research Dissertations </EM></h1>
+</div>
+    <div class="container">
+
+<h2> Kishore Prahallad, LTI,CMU</h2>
+<p>
+<a href="../pdfs/ksp_phd.pdf"><h2> AUTOMATIC BUILDING OF SYNTHETIC VOICES FROM AUDIO BOOKS </h2></a> 
+<h3> Abstract </h3>
+</p>
+<p>
+Current state-of-the-art text-to-speech systems produce intelligible
+speech but lack the prosody of natural utterances. Building better
+models of prosody involves development of prosodically rich speech
+databases. However, development of such speech databases requires
+a large amount of effort and time. An alternative is to exploit story
+style monologues (long speech files) in audio books. These monologues
+already encapsulate rich prosody including varied intonation contours,
+pitch accents and phrasing patterns. Thus, audio books act as excellent
+candidates for building prosodic models and natural sounding synthetic
+voices. The processing of such audio books poses several challenges
+including segmentation of long speech files, detection of mispronunciations, extraction and evaluation of representations of prosody. In this
+thesis, we address the issues of segmentation of long speech files, capturing prosodic phrasing patterns of a speaker, and conversion of speaker
+characteristics. Techniques developed to address these issues include –
+text-driven and speech-driven methods for segmentation of long speech
+files; an unsupervised algorithm for learning speaker-specific phrasing
+patterns and a voice conversion method by modeling target speaker
+characteristics.
+
+
+    </div>
+
+
+
+ <div class="container">
+
+<h2> Heiga Zen, NITECH</h2>
+<p>
+<a href="../pdfs/zen_phd.pdf"><h2> REFORMULATING HMM AS A TRAJECTORY MODEL BY IMPOSING EXPLICIT RELATIONSHIPS BETWEEN STATIC AND DYNAMIC FEATURES </h2></a>
+<h3> Abstract </h3>
+</p>
+<p>
+In recent years, the most popular acoustic model in automatic speech recognition (ASR)
+and text-to-speech synthesis (TTS) is a hidden Markov model (HMM), due to its ease of
+implementation and modeling flexibility. However, a number of limitations for modeling
+sequences of speech spectra using the HMM have been pointed out, such as i) piece-wise
+constant statistics within a state and ii) conditional independence assumption of state out-
+put probabilities. To overcome these shortcomings, a variety of alternative acoustic mod-
+els have been proposed. Although these models can improve model accuracy and speech
+recognition performance, they generally require an increase in the number of model pa-
+rameters. In contrast, dynamic features can also enhance performances of HMM-based
+speech recognizers and has been widely adopted. It can be viewed as a simple mechanism
+to capture time dependencies in the HMM. However, this approach is mathematically im-
+proper in the sense of statistical modeling. Generally, the dynamic features are calculated
+as regression coefficients from their neighboring static features. Therefore, relationships
+between the static and dynamic features are deterministic. However, these relationships
+are ignored and the static and dynamic features are modeled as independent statistical
+variables in the HMM framework. Ignoring these interdependencies allows inconsistency
+between the static and dynamic features when the HMM is used as a generative model in
+the obvious way.
+
+In the present dissertation, a novel acoustic model, named a trajectory HMM, is described.
+This model is derived from the HMM whose state output vector includes both static and
+dynamic features. By imposing explicit relationships between the static and dynamic fea-
+tures, the HMM is naturally translated into a trajectory model. The above inconsistency
+and limitations of the HMM can be alleviated by the trajectory HMM. Furthermore, pa-
+rameterization of the trajectory HMM is completely the same as that of the HMM with
+the same model topology. Therefore, any additional parameters are not required. In the
+present dissertation, model training algorithms based on a Viterbi approximation and a
+Markov chain Monte Carlo (MCMC) method and a search algorithm based on a delayed
+decision strategy are also derived. Results of continuous speech recognition and speech
+synthesis experiments show that the trajectory HMM can improve the performance both of speech recognizers and synthesizers.
+
+    </div>
+
+
+</div>
+
+</div>
+
+  <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
+  <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+
+  </body>
+</html>
+

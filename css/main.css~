@@ -1,0 +1,98 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family:  'Roboto', sans-serif;
+
+}
+
+p, div {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-image: url('/me_1.jpg') repeat 0 0;
+}
+
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+.container-narrow > hr {
+    margin: 40px 0 0 0;
+  }
+
+
+ .marketing {
+  margin: 40px 0;
+}
+
+.jumbotron{
+ font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.submit{
+  margin: 50px 0px 0px 20px ;
+  text-align: center;
+
+  ;
+}
+ul li {
+	margin: 10px 10px 0px 40px ;
+	display: inline-block;
+}
+
+ul p{
+	margin: 10px 15px 0px 0px ;
+}
+
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 250%;
+    padding: 40px
+}
+
+
+heading {
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 10px 10px 0px 40px ;
+    padding: 90px
+}
+
+.roundrect {
+border-radius: 15px;
+}
+
+
+.container p {
+ font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: grey
+  letter-spacing: 1.5px;
+  font-size: 150%;
+
+}
+
+p blockquote{
+
+font-family: 'Roboto', sans-serif;
+  color: ligtblue
+  letter-spacing: 1.5px;
+  font-size: 250%;
+
+}
+

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Introduction to Text to Speech </title>
+    
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="../css/bootstrap.min.css" rel="stylesheet"  media="screen">
+      <link href="../css/main.css" rel="stylesheet"  media="screen">
+    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Text to Speech Synthesis</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+
+    <div class="container">
+      <h1> INTRODUCTION TO TTS </EM></h1>
+</div>
+<div class="container">
+<p>
+I believe that the best way to get started(in any field) is by watching a few <EM> introductory video lectures</EM>, reading some <EM> PhD and Masters dissertations</EM> related to the field, some(exceptional?) <EM> papers and journals</EM>. I have populated this page hence with these, and ofcourse from the people I believe are the best(non-exhaustive list) in the business. I also plan to add my interpretations of everything on this page soon !! 
+</p>
+</div>
+
+    <div class="container">
+
+      <h1> VIDEO LECTURES  </EM></h1>
+</div>
+    <div class="container">
+
+      <a class="btn btn-primary btn-lg btn-block" href="https://archive.org/details/Text-to-speechtts-AQuickOverview" > Quick Overview of TTS by Dr. Kishore Prahallad</a>
+    <br>
+      <a class="btn btn-primary btn-lg btn-block" href="https://www.youtube.com/watch?v=xzL-pxcpo-E"> Applications of TTS by Prof. Simon King</a> <br>
+      <a class="btn btn-primary btn-lg btn-block" href="https://www.youtube.com/watch?v=7mjh0PSUv0M"> Closer Look at Synthesis by Kim Silverman </a> <br>
+
+</div>
+
+    <div class="container">
+      <h1> RESEARCH DISSERTATIONS </EM></h1>
+</div>
+    <div class="container" align="justify" >
+
+<h2> Kishore Prahallad, LTI,CMU</h2>
+<p>
+<a href="../pdfs/ksp_phd.pdf"><h2> AUTOMATIC BUILDING OF SYNTHETIC VOICES FROM AUDIO BOOKS </h2></a> 
+<h3> Abstract </h3>
+</p>
+<p>
+Current state-of-the-art text-to-speech systems produce intelligible
+speech but lack the prosody of natural utterances. Building better
+models of prosody involves development of prosodically rich speech
+databases. However, development of such speech databases requires
+a large amount of effort and time. An alternative is to exploit story
+style monologues (long speech files) in audio books. These monologues
+already encapsulate rich prosody including varied intonation contours,
+pitch accents and phrasing patterns. Thus, audio books act as excellent
+candidates for building prosodic models and natural sounding synthetic
+voices. The processing of such audio books poses several challenges
+including segmentation of long speech files, detection of mispronunciations, extraction and evaluation of representations of prosody. In this
+thesis, we address the issues of segmentation of long speech files, capturing prosodic phrasing patterns of a speaker, and conversion of speaker
+characteristics. Techniques developed to address these issues include –
+text-driven and speech-driven methods for segmentation of long speech
+files; an unsupervised algorithm for learning speaker-specific phrasing
+patterns and a voice conversion method by modeling target speaker
+characteristics.
+
+
+    </div>
+
+
+
+ <div class="container" align="justify" >
+
+<h2> Heiga Zen, NITECH</h2>
+<p>
+<a href="../pdfs/zen_phd.pdf"><h2> REFORMULATING HMM AS A TRAJECTORY MODEL BY IMPOSING EXPLICIT RELATIONSHIPS BETWEEN STATIC AND DYNAMIC FEATURES </h2></a>
+<h3> Abstract </h3>
+</p>
+<p>
+In recent years, the most popular acoustic model in automatic speech recognition (ASR)
+and text-to-speech synthesis (TTS) is a hidden Markov model (HMM), due to its ease of
+implementation and modeling flexibility. However, a number of limitations for modeling
+sequences of speech spectra using the HMM have been pointed out, such as i) piece-wise
+constant statistics within a state and ii) conditional independence assumption of state output probabilities. To overcome these shortcomings, a variety of alternative acoustic models have been proposed. Although these models can improve model accuracy and speech
+recognition performance, they generally require an increase in the number of model parameters. In contrast, dynamic features can also enhance performances of HMM-based
+speech recognizers and has been widely adopted. It can be viewed as a simple mechanism
+to capture time dependencies in the HMM. However, this approach is mathematically improper in the sense of statistical modeling. Generally, the dynamic features are calculated
+as regression coefficients from their neighboring static features. Therefore, relationships
+between the static and dynamic features are deterministic. However, these relationships
+are ignored and the static and dynamic features are modeled as independent statistical
+variables in the HMM framework. Ignoring these interdependencies allows inconsistency
+between the static and dynamic features when the HMM is used as a generative model in
+the obvious way.
+
+In the present dissertation, a novel acoustic model, named a trajectory HMM, is described.
+This model is derived from the HMM whose state output vector includes both static and
+dynamic features. By imposing explicit relationships between the static and dynamic features, the HMM is naturally translated into a trajectory model. The above inconsistency
+and limitations of the HMM can be alleviated by the trajectory HMM. Furthermore, parameterization of the trajectory HMM is completely the same as that of the HMM with
+the same model topology. Therefore, any additional parameters are not required. In the
+present dissertation, model training algorithms based on a Viterbi approximation and a
+Markov chain Monte Carlo (MCMC) method and a search algorithm based on a delayed
+decision strategy are also derived. Results of continuous speech recognition and speech
+synthesis experiments show that the trajectory HMM can improve the performance both of speech recognizers and synthesizers.
+
+    </div>
+
+
+
+  <div class="container" align="justify" >
+
+<h2> Tomoki Toda, NAIST </h2>
+<p>
+<a href="../pdfs/toda_phd.pdf"><h2> HIGH-QUALITY AND FLEXIBLE SPEECH SYNTHESIS WITH SEGMENT SELECTION AND VOICE CONVERSION </h2></a>
+<h3> Abstract </h3>
+</p>
+<p>
+Text-to-Speech (TTS) is a useful technology that converts any text into a
+speech signal. It can be utilized for various purposes, e.g. car navigation, announcements in railway stations, response services in telecommunications, and
+e-mail reading. Corpus-based TTS makes it possible to dramatically improve
+the naturalness of synthetic speech compared with the early TTS. However, no
+general-purpose TTS has been developed that can consistently synthesize sufficiently natural speech. Furthermore, there is not yet enough flexibility in corpus-
+based TTS.
+This thesis addresses two problems in speech synthesis. One is how to improve
+the naturalness of synthetic speech in corpus-based TTS. The other is how to
+improve control of speaker individuality in order to achieve more flexible speech
+synthesis. To deal with the former problem, we focus on two factors: (1) an
+algorithm for selecting the most appropriate synthesis units from a speech corpus,
+and (2) an evaluation measure for selecting the synthesis units. Moreover, we
+focus on a voice conversion technique to control speaker individuality to deal
+with the latter problem.
+Since various vowel sequences appear frequently in Japanese, it is not realistic to prepare long units that include all possible vowel sequences to avoid
+vowel-to-vowel concatenation, which often produces auditory discontinuity. In
+order to address this problem, we propose a novel segment selection algorithm
+based on both phoneme and diphone units that does not avoid concatenation of vowel sequences but alleviates the resulting discontinuity. Experiments testing
+concatenation of vowel sequences clarify that better segments can be selected by
+considering concatenations not only at phoneme boundaries but also at vowel
+centers. Moreover, the results of perceptual experiments show that speech synthesized using the proposed algorithm has better naturalness than that using the
+conventional algorithms.
+A cost is established as a measure for selecting the optimum waveform segments from a speech corpus. In order to achieve high-quality segment selection for
+concatenative TTS, it is important to utilize a cost that corresponds to perceptual
+characteristics. We first clarify the correspondence of the cost to the perceptual
+scores and then evaluate various functions to integrate local costs capturing the
+degradation of naturalness in individual segments. From the results of perceptual
+experiments, we find a novel cost that takes into account not only the degradation of naturalness over the entire synthetic speech but also the local degradation.
+We also clarify that the naturalness of synthetic speech can be slightly improved
+by utilizing this cost and investigate the effect of using this cost for segment
+selection.
+We improve the voice conversion algorithm based on the Gaussian Mixture
+Model (GMM), which is a conventional statistical voice conversion algorithm.
+The GMM-based algorithm can convert speech features continuously using the
+correlations between source and target features. However, the quality of the converted speech is degraded because the converted spectrum is excessively smoothed
+by the statistical averaging operation. To overcome this problem, we propose a
+novel voice conversion algorithm that incorporates Dynamic Frequency Warping
+(DFW) technique. The experimental results reveal that the proposed algorithm
+can synthesize speech with a higher quality while maintaining equal conversion-
+accuracy for speaker individuality compared with the GMM-based algorithm.
+
+    </div>
+
+
+
+
+  <div class="container" align="justify" >
+
+<h2> Junichi Yamagishi </h2>
+<p>
+<a href="../pdfs/jy_phd.pdf"><h2> AVERAGE VOICE BASED SPEECH SYNTHESIS </h2></a>
+<h3> Abstract </h3>
+</p>
+<p>
+This thesis describes a novel speech synthesis framework “Average-Voice-based Speech Synthesis.” By using the speech synthesis framework, synthetic
+speech of arbitrary target speakers can be obtained robustly and steadily
+even if speech samples available for the target speaker are very small. This
+speech synthesis framework consists of speaker normalization algorithm for
+the parameter clustering, speaker normalization algorithm for the parameter
+estimation, the transformation/adaptation part, and modification part of the
+rough transformation.
+In the parameter clustering using decision-tree-based context clustering
+techniques for average voice model, the nodes of the decision tree do not
+always have training data of all speakers, and some nodes have data from
+only one speaker. This speaker-biased node causes degradation of quality
+of average voice and synthetic speech after speaker adaptation, especially in
+prosody. Therefore, we firstly propose a new context clustering technique,
+named 'shared-decision-tree-based context clustering' to overcome this problem. Using this technique, every node of the decision tree always has training
+data from all speakers included in the training speech database. As a result,
+we can construct decision tree common to all training speakers and each
+distribution of the node always reflects the statistics of all speakers.
+
+However, when training data of each training speaker differs widely, the
+distributions of the node often have bias depending on speaker and/or gender
+and this will degrade the quality of synthetic speech. Therefore, we incorporate 'speaker adaptive training' into the parameter estimation procedure of
+average voice model to reduce the influence of speaker dependence. In the
+speaker adaptive training, the speaker difference between training speaker’s
+voice and average voice is assumed to be expressed as a simple linear regression function of mean vector of the distribution and a canonical average voice
+model is estimated using the assumption.
+In speaker adaptation for speech synthesis, it is desirable to convert both
+voice characteristics and prosodic features such as F0 and phone duration.
+Therefore, we utilize a framework of 'hidden semi-Markov model' (HSMM)
+which is an HMM having explicit state duration distributions and we propose
+an HSMM-based model adaptation algorithm to simultaneously transform
+both state output and state duration distributions. Furthermore, we also
+propose an HSMM-based speaker adaptive training algorithm to normalize
+both state output and state duration distributions of average voice model at
+the same time.
+Finally, we explore several speaker adaptation algorithms to transform
+more effectively the average voice model into the target speaker’s model
+when the adaptation data for the target speaker is limited. Furthermore,
+we adopt “MAP (Maximum A Posteriori) modification” to upgrade the estimation for the distributions having sufficient amount of speech data. When
+sufficient amount of the adaptation data is available, the MAP modification
+theoretically matches the ML estimation. As a result, it is thought that we
+do not need to choose the modeling strategy depending on the amount of
+speech data and we would accomplish the consistent method to synthesize
+speech in the unified way for arbitrary amount of the speech data.
+
+</p>
+
+    </div>
+
+
+
+
+<div class="container" align="justify">
+
+<h2> Jitendra Vepa, CSTR </h2>
+<p>
+<a href="../pdfs/jv_phd.pdf"><h2> JOIN COST FOR UNIT SELECTION SPEECH SYNTHESIS </h2></a>
+</p>
+
+<p>
+
+
+</p>
+
+</div>
+
+
+
+<div class="container" align="justify">
+<h2>John Kominek, LTI,CMU </h2>
+<p>
+<a href="../pdfs/jk_phd.pdf"><h2> TTS FROM ZERO - BUILDING SYNTHETIC VOICES FOR NEW LANGUAGES </h2></a>
+</p>
+<p>
+</p>
+</div>
+
+
+<div class="container" align="justify">
+<h2> Vijayaditya Peddinti, IIIT Hyd </h2>
+<p>
+<a href="../pdfs/vp_phd.pdf"><h2> SYNTHESIS OF MISSING UNITS IN A TELUGU TEXT TO SPEECH SYSTEM </h2></a>
+</p>
+<p>
+</p>
+</div>
+
+
+
+
+<div class="container" align="justify">
+
+<h2> Korin Richmond, CSTR </h2>
+<p>
+<a href="../pdfs/kr_phd.pdf"><h2> ESTIMATING ARTICULATORY PARAMETERS FROM THE ACOUSTIC SIGNAL </h2></a>
+</p>
+
+<p>
+
+
+</p>
+
+</div>
+
+
+<div class="container" align="justify">
+
+<h2>Alok Parlikar, LTI,CMU </h2>
+<p>
+<a href="../pdfs/ap_phd.pdf"><h2> STYLE SPECIFIC PHRASING IN SPEECH SYNTHESIS </h2></a>
+</p>
+
+<p>
+</p>
+
+</div>
+
+
+<div class="container" align="justify">
+<h2> Samuel Thomas, IIT Madras </h2>
+<p>
+<a href="../pdfs/st_ms.pdf"><h2> NATURAL SOUNDING TEXT-TO-SPEECH SYNTHESIS BASED ON SYLLABLE-LIKE UNITS </h2></a>
+</p>
+<p>
+</p>
+</div>
+
+
+
+<div class="container" align="justify">
+
+<h2> Oliver Watts, CSTR </h2>
+<p>
+<a href="../pdfs/ow_phd.pdf"><h2> UNSUPERVISED LEARNING FOR TEXT TO SPEECH SYNTHESIS </h2></a>
+</p>
+
+<p>
+</p>
+
+</div>
+
+<div class="container" align="justify">
+<h2> Gopala Krishna Anumanchili,LTI,CMU </h2>
+<p>
+<a href="../pdfs/gka_phd.pdf"><h2> INTRA-LINGUAL AND CROSS-LINGUAL PROSODY MODELING </h2></a>
+</p>
+<p>
+</p>
+</div>
+
+<div class="container" align="justify">
+<h2> Raghavendra, IIIT Hyderabad </h2>
+<p>
+<a href="../pdfs/evr_ms.pdf"><h2> APPROXIMATE MATCHING OF SYLLABLES AND USE OF GLOBAL SYLLABLE SET FOR TEXT-TO-SPEECH IN INDIAN LANGUAGES </h2></a>
+</p>
+<p>
+</p>
+</div>
+
+
+
+
+<div class="container" align="justify">
+<h2> Cassia Valentini, NST, CSTR </h2>
+<p>
+<a href="../pdfs/cvb_phd.pdf"><h2> INTELLIGIBILITY ENHANCEMENT OF SYNTHETIC SPEECH IN NOISE </h2></a>
+</p>
+<p>
+</p>
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+  <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
+  <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+
+  </body>
+</html>
+
